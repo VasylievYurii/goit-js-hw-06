@@ -11,7 +11,7 @@ function onFormSubmit(event){
     const mail = formElements.email.value;
     const password = formElements.password.value;
 
-    if ((mail||password) === ''){
+    if (mail.trim().length === 0 || password.trim().length === 0){
 
         alert('Всі поля повинні бути заповнені!')
 
@@ -25,6 +25,7 @@ function onFormSubmit(event){
         reset(formElements);
       
     }
+      
     
 }
 

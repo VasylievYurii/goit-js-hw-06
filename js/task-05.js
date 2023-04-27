@@ -4,8 +4,9 @@ const outputRef = document.querySelector('#name-output');
 inputRef.addEventListener("input", onInputChange);
 
 function onInputChange(event) {
-
-    if (outputRef.textContent === ' '){
+ 
+    if (event.currentTarget.value.trim().length === 0){
+        
             outputRef.textContent = 'Anonymous';
 
     } else {
@@ -13,3 +14,4 @@ function onInputChange(event) {
     };
 }
 
+console.log("inputRef", inputRef.textLength);
